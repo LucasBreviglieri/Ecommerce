@@ -1,1 +1,1 @@
-<h2> Pagina nao encontrada</h2>
+<h2> Pagina fora </h2>
