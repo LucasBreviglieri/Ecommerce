@@ -16,6 +16,18 @@ Class Produtos extends Conexao {
         $this->GetLista();
     }
 
+    function GetProdutosID($id) {
+        //Query especificar para buscar os produtos de uma categoria especifica.
+        $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = c.cate_id ";
+
+        $query .= "AND pro_id = {$id}";
+
+        $this->ExecuteSQL($query);
+        
+        $this->GetLista();
+    }
+
+
     private function GetLista(){
         $i = 1;
         while($lista = $this->ListarDados()):
@@ -28,11 +40,11 @@ Class Produtos extends Conexao {
             'pro_altura'     => $lista['pro_altura'],
             'pro_largura'    => $lista['pro_largura'],
             'pro_comprimento'=> $lista['pro_comprimento'],
-            'pro_img'        => $lista['pro_img'],
             'pro_slug'       => $lista['pro_slug'],
-            'pro_referencia'        => $lista['pro_referencia'],
+            'pro_ref'        => $lista['pro_ref'],
             'cate_nome'      => $lista['cate_nome'],
-            'cate_id'        => $lista['cate_id']
+            'cate_id'        => $lista['cate_id'],
+            'pro_img'        => ROTAS::ImageLink ($lista['pro_img'], 550, 550)
             );
 
         $i++;

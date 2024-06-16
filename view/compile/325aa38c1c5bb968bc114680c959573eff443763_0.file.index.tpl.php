@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-06-03 22:53:03
+/* Smarty version 3.1.48, created on 2024-06-15 22:00:44
   from 'C:\wamp64\www\ecommerce\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_665e494f1ef2b3_55638023',
+  'unifunc' => 'content_666e0f0ce4a106_72351530',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '325aa38c1c5bb968bc114680c959573eff443763' => 
     array (
       0 => 'C:\\wamp64\\www\\ecommerce\\view\\index.tpl',
-      1 => 1717455180,
+      1 => 1718488844,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_665e494f1ef2b3_55638023 (Smarty_Internal_Template $_smarty_tpl) {
+function content_666e0f0ce4a106_72351530 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html> 
 <html lang="pt-BR">
 <head>
@@ -42,10 +42,16 @@ function content_665e494f1ef2b3_55638023 (Smarty_Internal_Template $_smarty_tpl)
 /temas/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" rel="stylesheet">    <?php echo '<script'; ?>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" rel="stylesheet">    
+  <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"><?php echo '</script'; ?>
 >
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><?php echo '</script'; ?>
+>
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/temas/css/styleModal.css">
   <title>Loja ECOMMERCE </title>
 
 
@@ -169,6 +175,11 @@ function content_665e494f1ef2b3_55638023 (Smarty_Internal_Template $_smarty_tpl)
  src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /temas/js/custom.js"><?php echo '</script'; ?>
 >
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/temas/js/Modal.js"><?php echo '</script'; ?>
+>
+  
 </body>
 </html>
   <?php }

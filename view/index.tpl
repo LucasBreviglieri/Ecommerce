@@ -14,8 +14,11 @@
   <link href="{$GET_TEMA}/temas/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" rel="stylesheet">    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="{$GET_TEMA}/temas/css/styleModal.css">
   <title>Loja ECOMMERCE </title>
 
 
@@ -119,6 +122,8 @@
   <script src="{$GET_TEMA}/temas/js/bootstrap.bundle.min.js"></script>
   <script src="{$GET_TEMA}/temas/js/tiny-slider.js"></script>
   <script src="{$GET_TEMA}/temas/js/custom.js"></script>
+  <script src="{$GET_TEMA}/temas/js/Modal.js"></script>
+  
 </body>
 </html>
   
