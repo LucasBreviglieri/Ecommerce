@@ -34,7 +34,11 @@ class Rotas {
     }
 
     static function pag_Login() {   
-        return self::get_SiteHOME() . '/' . self::$pasta_view. '/login';
+        return self::get_SiteHOME() . '/' . self::$pasta_view . '/login.html';
+    }
+
+    static function pag_Cadastro() {   
+        return self::get_SiteHOME() . '/cadastro';
     }
 
     static function pag_Produtos() { 

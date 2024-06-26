@@ -1,78 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt">
-  <head>
-  	<title>Login 07</title>
+<head>
+    <title>Login/Cadastro</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="temas/cssLogin/style.css">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="temas/cssLogin/style.css">
+    <style>
+        /* Ajuste para centralizar conteúdo verticalmente */
+        .ftco-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinhar no topo */
+            min-height: 100vh;
+            background-color: #f8f9fd; /* Cor de fundo para teste */
+        }
+        .login-wrap, .text-wrap {
+            background-color: #fff; /* Fundo branco para teste */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 34px -15px rgba(0,0,0,0.24);
+            margin-top: 50px; /* Margem superior aumentada para movê-lo para cima */
+        }
+        .login-wrap {
+            margin-right: 20px; /* Espaçamento entre os elementos */
+            width: calc(50% - 20px); /* Ajuste de largura para manter o alinhamento */
+        }
+        .text-wrap {
+            width: calc(50% - 20px); /* Ajuste de largura para manter o alinhamento */
+        }
+        .transition {
+            width: 100%; /* Garante que ambos os formulários ocupem a mesma largura */
+            overflow: hidden; /* Para esconder qualquer conteúdo que extrapole a largura */
+        }
+        .hidden {
+            display: none;
+        }
 
-	</head>
-	<body>
-	<section class="ftco-section">
-		<div class="container">
-			
-			<div class="row justify-content-center">
-				<div class="col-md-12 col-lg-10">
-					<div class="wrap d-md-flex">
-						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
-							<div class="text w-100">
-								<h2>Bem-vindo ao login</h2>
-								<p>Não tem uma conta?</p>
-								<a href="#" class="btn btn-white btn-outline-white">Cadastre-se</a>
-							</div>
-			      </div>
-						<div class="login-wrap p-4 p-lg-5">
-			      	<div class="d-flex">
-			      		<div class="w-100">
-			      			<h3 class="mb-4">Entrar</h3>
-			      		</div>
-								<div class="w-100">
-									<p class="social-media d-flex justify-content-end">
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
-									</p>
-								</div>
-			      	</div>
-							<form action="#" class="signin-form">
-			      		<div class="form-group mb-3">
-			      			<label class="label" for="name">Nome de usuário</label>
-			      			<input type="text" class="form-control" placeholder="Nome de usuário" required>
-			      		</div>
-		            <div class="form-group mb-3">
-		            	<label class="label" for="password">Senha</label>
-		              <input type="password" class="form-control" placeholder="Senha" required>
-		            </div>
-		            <div class="form-group">
-		            	<button type="submit" class="form-control btn btn-primary submit px-3">Entrar</button>
-		            </div>
-		            <div class="form-group d-md-flex">
-		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Lembrar de mim
-									  <input type="checkbox" checked>
-									  <span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="w-50 text-md-right">
-										<a href="#">Esqueceu a senha</a>
-									</div>
-		            </div>
-		          </form>
-		        </div>
-		      </div>
-				</div>
-			</div>
-		</div>
-	</section>
+    </style>
+</head>
+<body>
+<section class="ftco-section" style="margin-top:-80px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="wrap d-md-flex">
+                    <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+                        <div class="text w-100">
+                            <h2>Bem-vindo</h2>
+                            <p id="toggle-text">Não tem uma conta?</p>
+                            <button type="button" class="btn btn-white btn-outline-white" id="toggle-btn">Cadastre-se</button>
+                        </div>
+                    </div>
+                    <div class="login-wrap p-4 p-lg-5">
+                        <div class="transition slide-in" id="login-form">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4">Entrar</h3>
+                                </div>
+                                <div class="w-100">
+                                    <p class="social-media d-flex justify-content-end">
+                                        <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+                                        <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <form class="signin-form">
+                                <div class="form-group mb-3">
+                                    <label class="label" for="login-name">Nome de usuário</label>
+                                    <input type="text" class="form-control" id="login-name" placeholder="Nome de usuário" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="login-password">Senha</label>
+                                    <input type="password" class="form-control" id="login-password" placeholder="Senha" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary submit px-3">Entrar</button>
+                                </div>
+                                <div class="form-group d-md-flex">
+                                    <div class="w-50 text-left">
+                                        <label class="checkbox-wrap checkbox-primary mb-0">Lembrar de mim
+                                            <input type="checkbox" id="login-remember" checked>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="w-50 text-md-right">
+                                        <a href="#">Esqueceu a senha</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="transition slide-out-right hidden" id="signup-form">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4">Cadastre-se</h3>
+                                </div>
+                                <div class="w-100">
+                                    <p class="social-media d-flex justify-content-end">
+                                        <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+                                        <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <form class="signup-form">
+                                <div class="form-group mb-3">
+                                    <label class="label" for="signup-name">Nome de usuário</label>
+                                    <input type="text" class="form-control" id="signup-name" placeholder="Nome de usuário" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="signup-email">Email</label>
+                                    <input type="email" class="form-control" id="signup-email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="signup-password">Senha</label>
+                                    <input type="password" class="form-control" id="signup-password" placeholder="Senha" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="signup-confirm-password">Confirme a Senha</label>
+                                    <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirme a Senha" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary submit px-3">Cadastrar</button>
+                                </div>
+                                <div class="form-group d-md-flex">
+                                    <div class="w-50 text-left">
+                                        <label class="checkbox-wrap checkbox-primary mb-0">Aceito os termos e condições
+                                          <input type="checkbox" id="signup-terms" required>
+                                          <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-	<script src="temas/js/jquery.min.js"></script>
-  <script src="temas/js/popper.js"></script>
-  <script src="temas/js/bootstrap.min.js"></script>
-  <script src="temas/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="temas/js/popper.js"></script>
+<script src="temas/js/bootstrap.min.js"></script>
+<script src="temas/js/main.js"></script>
 
-	</body>
+<script>
+$(document).ready(function() {
+    $('#toggle-btn').click(function() {
+        $('.text-wrap').toggleClass('order-md-last'); // Move o texto para frente
+        $('.transition').toggleClass('slide-out-right slide-in'); // Alternar entre as classes para animação
+        $('#toggle-text').text(function(i, text) {
+            return text === "Não tem uma conta?" ? "Já tem uma conta?" : "Não tem uma conta?";
+        })
+        $('#toggle-btn').text(function(i, text) {
+            return text === "Cadastre-se" ? "Login" : "Cadastre-se";
+        });
+        
+        $('#login-form').toggleClass('hidden'); // Alternar classe hidden no formulário de login
+        $('#signup-form').toggleClass('hidden'); // Alternar classe hidden no formulário de cadastro
+    });
+});
+</script>
+
+</body>
 </html>

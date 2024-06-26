@@ -32,11 +32,18 @@ Class Conexao extends Config{
         return $link;
     }
 
-    function ExecuteSQL($query, array $params = NULL){
+    function ExecuteSQL($query, array $params = NULL) {
         $this->obj = $this->Conectar()->prepare($query);
+
+        if ($params !== NULL && count($params) > 0) {
+            foreach ($params as $key => $value) {
+                $this->obj->bindValue($key, $value);
+            }
+        }
+
         return $this->obj->execute();
     }
-
+    
     function ListarDados(){
         return $this->obj->fetch(PDO::FETCH_ASSOC);
     }

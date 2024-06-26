@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="{$GET_TEMA}/temas/css/styleModal.css">
-  <title>Loja ECOMMERCE </title>
+  <title>Loja ECOMMERCE</title>
 
 
 </head>
@@ -38,7 +38,7 @@
           <li><a class="nav-link" href="{$PAG_CONTATO}">Contato</a></li>
         </ul>
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-          <li><a class="nav-link" href="{$PAG_Login}"><img src="{$GET_TEMA}/temas/images/user.svg"></a></li>
+          <li><a class="nav-link" href="{$PAG_LOGIN}"><img src="{$GET_TEMA}/temas/images/user.svg"></a></li>
           <li><a class="nav-link" href="{$PAG_CARRINHO}"><img src="{$GET_TEMA}/temas/images/cart.svg"></a></li>
         </ul>
       </div>

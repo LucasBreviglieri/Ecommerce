@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-06-15 22:00:44
+/* Smarty version 3.1.48, created on 2024-06-24 22:18:34
   from 'C:\wamp64\www\ecommerce\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_666e0f0ce4a106_72351530',
+  'unifunc' => 'content_6679f0baef6579_11814618',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '325aa38c1c5bb968bc114680c959573eff443763' => 
     array (
       0 => 'C:\\wamp64\\www\\ecommerce\\view\\index.tpl',
-      1 => 1718488844,
+      1 => 1719267514,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_666e0f0ce4a106_72351530 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6679f0baef6579_11814618 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html> 
 <html lang="pt-BR">
 <head>
@@ -52,7 +52,7 @@ function content_666e0f0ce4a106_72351530 (Smarty_Internal_Template $_smarty_tpl)
 >
   <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /temas/css/styleModal.css">
-  <title>Loja ECOMMERCE </title>
+  <title>Loja ECOMMERCE</title>
 
 
 </head>
@@ -75,7 +75,7 @@ function content_666e0f0ce4a106_72351530 (Smarty_Internal_Template $_smarty_tpl)
 ">Contato</a></li>
         </ul>
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-          <li><a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['PAG_Login']->value;?>
+          <li><a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['PAG_LOGIN']->value;?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /temas/images/user.svg"></a></li>
           <li><a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>

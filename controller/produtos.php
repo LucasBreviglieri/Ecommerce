@@ -1,13 +1,27 @@
-<?php
+    <?php
 
-$smarty = new template();
+    $smarty = new template();
 
-$produtos = new Produtos();
-$produtos ->GetProdutos();
+    $categorias = new Categorias();
+    $categorias->GetCategorias(); 
 
-$smarty->assign('PRO', $produtos ->GetItens());
-$smarty->assign('PRO_INFO', Rotas::pag_ProdutosInfo());
-$smarty->display('produtos.tpl');
+    $produtos = new Produtos();
+    if(isset(Rotas::$pag[1])){
+        $produtos ->GetProdutosCateID(Rotas::$pag[1]);
+    }else{
+        $produtos ->GetProdutos();
+    }
 
+    $smarty->assign('GET_TEMA',     Rotas::get_SiteTEMA());
+    $smarty->assign('GET_HOME',     Rotas::get_SiteHOME());
+    $smarty->assign('PAG_CARRINHO', Rotas::pag_Carrinho());
+    $smarty->assign('PAG_PRODUTOS', Rotas::pag_Produtos());
 
-?>  
+    $smarty->assign('PRO',          $produtos ->GetItens());
+    $smarty->assign('CATEGORIAS',   $categorias->GetItens()); 
+    $smarty->assign('PRO_INFO',     Rotas::pag_ProdutosInfo());
+    $smarty->assign('PRO_TOTAL',    $produtos->TotalDados());
+
+    $smarty->display('produtos.tpl');
+    
+    ?>  

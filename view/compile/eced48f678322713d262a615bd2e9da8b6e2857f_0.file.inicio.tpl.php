@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-06-16 02:49:54
+/* Smarty version 3.1.48, created on 2024-06-22 16:31:24
   from 'C:\wamp64\www\ecommerce\view\inicio.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_666e52d2e1e3e9_54207861',
+  'unifunc' => 'content_6676fc5c37b954_78200785',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eced48f678322713d262a615bd2e9da8b6e2857f' => 
     array (
       0 => 'C:\\wamp64\\www\\ecommerce\\view\\inicio.tpl',
-      1 => 1718506193,
+      1 => 1719073681,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_666e52d2e1e3e9_54207861 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6676fc5c37b954_78200785 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Início da Seção Hero -->
 <div class="hero">
     <div class="container">

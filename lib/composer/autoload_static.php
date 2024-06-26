@@ -21,6 +21,7 @@ class ComposerStaticInitf0119ce3d231193fcf9c9d86693b5db3
     );
 
     public static $classMap = array (
+        'Categorias' => __DIR__ . '/../..' . '/model/Categorias.class.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Conexao' => __DIR__ . '/../..' . '/model/Conexao.class.php',
         'Config' => __DIR__ . '/../..' . '/model/Config.class.php',

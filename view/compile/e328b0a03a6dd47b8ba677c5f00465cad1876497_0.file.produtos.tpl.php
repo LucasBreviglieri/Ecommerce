@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-06-16 02:56:55
+/* Smarty version 3.1.48, created on 2024-06-23 21:57:28
   from 'C:\wamp64\www\ecommerce\view\produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_666e5477b5a6c7_61533451',
+  'unifunc' => 'content_66789a486d4901_14109452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e328b0a03a6dd47b8ba677c5f00465cad1876497' => 
     array (
       0 => 'C:\\wamp64\\www\\ecommerce\\view\\produtos.tpl',
-      1 => 1718506612,
+      1 => 1719179842,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_666e5477b5a6c7_61533451 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66789a486d4901_14109452 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
     /* Estilos para a paginação */
     .pagination .page-link {
@@ -40,10 +40,7 @@ function content_666e5477b5a6c7_61533451 (Smarty_Internal_Template $_smarty_tpl)
         background-color: #3b5d50; /* Cor de fundo ao passar o mouse */
         border-color: #3b5d50; /* Cor da borda ao passar o mouse */
     }
-
-    
 </style>
-
 <!-- Start Hero Section -->
 <div class="hero">
     <div class="container">
@@ -56,76 +53,52 @@ function content_666e5477b5a6c7_61533451 (Smarty_Internal_Template $_smarty_tpl)
             </div>
             <div class="col-lg-7">
                 <div class="hero-img-wrap">
-                    <img src="view/temas/images/couch.png" class="img-fluid">
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/temas/images/couch.png" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Fim da Seção Hero -->
-
 <!-- Shopping dos Sofás Início -->
+ 
 <div class="container py-5">
-    <h1 class="mb-4 text-center" style="margin-top: 27px; margin-bottom: 27px;">Shopping dos Sofás</h1>
-    <div class="row g-4">
-        <div class="col-xl-3">
-            <div class="input-group">
-                <input type="search" class="form-control p-3" placeholder="Palavras-chave" aria-label="Pesquisar" aria-describedby="search-icon-1">
-                <button class="btn btn-primary" type="button" id="search-icon-1"><i class="fa fa-search"></i></button>
-            </div>
-        </div>
-        <div class="col-xl-3">
-            <div class="bg-light p-3 rounded d-flex align-items-center justify-content-between mb-4">
-                <label for="fruits" class="mb-0">Ordenação Padrão:</label>
-                <select id="fruits" name="fruitlist" class="form-select form-select-sm bg-light border-0">
-                    <option value="volvo">Nada</option>
-                    <option value="saab">Popularidade</option>
-                    <option value="opel">Orgânico</option>
-                    <option value="audi">Fantástico</option>
-                </select>
-            </div>
-        </div>
-    </div>
-
+    <h1 class="mb-4 text-center" style="height: -200px;">Shopping dos Sofás</h1>
+    
     <div class="row g-4">
         <div class="col-lg-3">
+            
             <div class="mb-3 text-center">
-                <h1 style="margin-top: -23px;">Categorias</h1>
+                <h2>Categorias</h2>
             </div>
             <ul class="list-unstyled" style="padding-left: 0; margin-top: 30px;">
                 <li class="mb-3">
-                    <a href="#" class="btn btn-light d-flex justify-content-between align-items-center w-100">
-                        <i class="fas fa-couch me-2"></i>Sofá Azul
-                        <span class="badge bg-link rounded-pill">(3)</span>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
+" class="btn btn-light d-flex justify-content-between align-items-center w-100">
+                        <i class="fas fa-couch me-2"></i> Todos
+                        <span class="badge bg-link rounded-pill">o</span>
                     </a>
                 </li>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIAS']->value, 'C');
+$_smarty_tpl->tpl_vars['C']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
+$_smarty_tpl->tpl_vars['C']->do_else = false;
+?>
                 <li class="mb-3">
-                    <a href="#" class="btn btn-light d-flex justify-content-between align-items-center w-100">
-                        <i class="fas fa-couch me-2"></i>Sofazinho
-                        <span class="badge bg-link rounded-pill">(5)</span>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
+" class="btn btn-light d-flex justify-content-between align-items-center w-100">
+                        <i class="fas fa-couch me-2"></i> <?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
+
+                        <span class="badge bg-link rounded-pill">o</span>
                     </a>
                 </li>
-                <li class="mb-3">
-                    <a href="#" class="btn btn-light d-flex justify-content-between align-items-center w-100">
-                        <i class="fas fa-couch me-2"></i>Sofazão
-                        <span class="badge bg-link rounded-pill">(2)</span>
-                    </a>
-                </li>
-                <li class="mb-3">
-                    <a href="#" class="btn btn-light d-flex justify-content-between align-items-center w-100">
-                        <i class="fas fa-chair me-2"></i>Poltrona
-                        <span class="badge bg-link rounded-pill">(8)</span>
-                    </a>
-                </li>
-                <li class="mb-3">
-                    <a href="#" class="btn btn-light d-flex justify-content-between align-items-center w-100">
-                        <i class="fas fa-chair me-2"></i>Banquinha Estofada
-                        <span class="badge bg-link rounded-pill">(5)</span>
-                    </a>
-                </li>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </ul>
         </div>
-
         <div class="modal fade" id="produtoModal" tabindex="-1" aria-labelledby="produtoModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -149,7 +122,7 @@ function content_666e5477b5a6c7_61533451 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <div class="col-lg-9">
-            <div class="row g-4">
+            <div class="row g-4" style="margin-top:30px;">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
 $_smarty_tpl->tpl_vars['P']->do_else = true;
@@ -187,9 +160,10 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
+            <?php if ($_smarty_tpl->tpl_vars['PRO_TOTAL']->value < 1) {?>
+                <H4 class="alert alert-danger">NENHUM PRODUTO ENCONTRADO !</H4>
+            <?php }?>
         </div>
-        
-        
     </div>
 
     <div class="col-12">

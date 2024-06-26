@@ -13,7 +13,7 @@ Class Config {
           BD_USER = "root",
           BD_SENHA = "",
           BD_BANCO = "Ecommerce",
-          BD_PREFIX = "";
+          BD_PREFIX = "lb_";
           
     //Informações para PHP MAILLER
     const EMAIL_HOST = "smtp.gmail.com";
