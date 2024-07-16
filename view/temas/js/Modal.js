@@ -2,9 +2,9 @@ $(document).ready(function () {
     $('.adicionar-carrinho').click(function () {
         var nomeProduto = $(this).data('product-name');
         var descricaoProduto = $(this).data('product-desc');
-        var valorProduto = parseFloat($(this).data('product-value')).toFixed(2);
+        var valorProduto = parseFloat($(this).data('product-value')).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         var imagemProduto = $(this).data('product-image');
-
+        
         // Limpa qualquer ocorrência duplicada no URL da imagem
         var cleanImageUrl = imagemProduto.replace(/(http:\/\/localhost\/ecommerce\/view\/temas\/images\/thumb.php\?src=)+/, "http://localhost/ecommerce/view/temas/images/thumb.php?src=");
 
@@ -13,7 +13,7 @@ $(document).ready(function () {
         $('#produtoModal .modal-body #produtoImagem').attr('src', cleanImageUrl);
         $('#produtoModal .modal-body #descricaoProduto').text(descricaoProduto);
         $('#produtoModal .modal-body #valorProduto').text(`R$ ${valorProduto}`);
-
+        
         // Estiliza o modal
         $('#produtoModal').css({
             'padding': '0',
@@ -59,7 +59,10 @@ $(document).ready(function () {
             'font-weight': 'bold',
             'color': '#28a745',
             'margin-bottom': '10px',
-            'text-align': 'center'
+            'text-align': 'center',
+            'text-overflow': 'ellipsis',
+            'display': 'block',
+            'max-width': '100%' // Assegura que o elemento use a largura disponível
         });
 
         // footer do modal

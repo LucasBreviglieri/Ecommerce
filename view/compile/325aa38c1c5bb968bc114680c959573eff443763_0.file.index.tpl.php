@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-06-24 22:18:34
+/* Smarty version 3.1.48, created on 2024-07-11 23:27:15
   from 'C:\wamp64\www\ecommerce\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6679f0baef6579_11814618',
+  'unifunc' => 'content_66906a53b04793_72496245',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '325aa38c1c5bb968bc114680c959573eff443763' => 
     array (
       0 => 'C:\\wamp64\\www\\ecommerce\\view\\index.tpl',
-      1 => 1719267514,
+      1 => 1720740431,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6679f0baef6579_11814618 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66906a53b04793_72496245 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html> 
 <html lang="pt-BR">
 <head>
@@ -52,6 +52,11 @@ function content_6679f0baef6579_11814618 (Smarty_Internal_Template $_smarty_tpl)
 >
   <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /temas/css/styleModal.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/temas/css/styleShopDetails.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css"/>
+  
   <title>Loja ECOMMERCE</title>
 
 
@@ -114,9 +119,14 @@ function content_6679f0baef6579_11814618 (Smarty_Internal_Template $_smarty_tpl)
           <div class="row links-wrap">
             <div class="col-6 col-sm-6 col-md-3">
               <ul class="list-unstyled">
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Carrinho</a></li>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_SobreNos']->value;?>
+">Sobre nós</a></li>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
+">Produtos</a></li>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
+">Carrinho</a></li>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CONTATO']->value;?>
+">Contato</a></li>
                 <li><a href="#">Minha conta</a></li>
               </ul>
             </div>
@@ -135,13 +145,6 @@ function content_6679f0baef6579_11814618 (Smarty_Internal_Template $_smarty_tpl)
                 <li><a href="#">Política de Privacidade</a></li>
               </ul>
             </div>
-            <div class="col-6 col-sm-6 col-md-3">
-              <ul class="list-unstyled">
-                <li><a href="#">Cadeira Nórdica</a></li>
-                <li><a href="#">Kruzo Aero</a></li>
-                <li><a href="#">Cadeira Ergonômica</a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -150,12 +153,12 @@ function content_6679f0baef6579_11814618 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-lg-6">
             <p class="mb-2 text-center text-lg-start">Copyright &copy;<?php echo '<script'; ?>
 >document.write(new Date().getFullYear());<?php echo '</script'; ?>
->. Todos os Direitos Reservados.</p>
+>. LucasBrevi.Corp. Todos os Direitos Reservados.</p>
           </div>
           <div class="col-lg-6 text-center text-lg-end">
             <ul class="list-unstyled d-inline-flex ms-auto">
               <li class="me-4"><a href="#">Termos &amp; Condições</a></li>
-              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Política de Privacidade  </a></li>
             </ul>
           </div>
         </div>

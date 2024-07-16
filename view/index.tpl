@@ -19,6 +19,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="{$GET_TEMA}/temas/css/styleModal.css">
+  <link rel="stylesheet" href="{$GET_TEMA}/temas/css/styleShopDetails.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css"/>
+  
   <title>Loja ECOMMERCE</title>
 
 
@@ -72,9 +76,10 @@
           <div class="row links-wrap">
             <div class="col-6 col-sm-6 col-md-3">
               <ul class="list-unstyled">
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Carrinho</a></li>
+                <li><a href="{$PAG_SobreNos}">Sobre nós</a></li>
+                <li><a href="{$PAG_PRODUTOS}">Produtos</a></li>
+                <li><a href="{$PAG_CARRINHO}">Carrinho</a></li>
+                <li><a href="{$PAG_CONTATO}">Contato</a></li>
                 <li><a href="#">Minha conta</a></li>
               </ul>
             </div>
@@ -93,25 +98,18 @@
                 <li><a href="#">Política de Privacidade</a></li>
               </ul>
             </div>
-            <div class="col-6 col-sm-6 col-md-3">
-              <ul class="list-unstyled">
-                <li><a href="#">Cadeira Nórdica</a></li>
-                <li><a href="#">Kruzo Aero</a></li>
-                <li><a href="#">Cadeira Ergonômica</a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
       <div class="border-top copyright">
         <div class="row pt-4">
           <div class="col-lg-6">
-            <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. Todos os Direitos Reservados.</p>
+            <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. LucasBrevi.Corp. Todos os Direitos Reservados.</p>
           </div>
           <div class="col-lg-6 text-center text-lg-end">
             <ul class="list-unstyled d-inline-flex ms-auto">
               <li class="me-4"><a href="#">Termos &amp; Condições</a></li>
-              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Política de Privacidade  </a></li>
             </ul>
           </div>
         </div>

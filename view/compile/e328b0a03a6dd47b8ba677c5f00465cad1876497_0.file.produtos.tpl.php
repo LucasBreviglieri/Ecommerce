@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-06-23 21:57:28
+/* Smarty version 3.1.48, created on 2024-07-16 22:37:41
   from 'C:\wamp64\www\ecommerce\view\produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66789a486d4901_14109452',
+  'unifunc' => 'content_6696f635e7f4e8_01984809',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e328b0a03a6dd47b8ba677c5f00465cad1876497' => 
     array (
       0 => 'C:\\wamp64\\www\\ecommerce\\view\\produtos.tpl',
-      1 => 1719179842,
+      1 => 1721169455,
       2 => 'file',
     ),
   ),
@@ -20,25 +20,34 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66789a486d4901_14109452 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696f635e7f4e8_01984809 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
     /* Estilos para a paginação */
     .pagination .page-link {
-        color: #3b5d50; /* Cor do texto dos botões */
-        background-color: transparent; /* Fundo transparente */
-        border-color: #3b5d50; /* Cor da borda */
-        margin-right: 5px; /* Espaçamento entre os botões */
+        color: #3b5d50;
+        /* Cor do texto dos botões */
+        background-color: transparent;
+        /* Fundo transparente */
+        border-color: #3b5d50;
+        /* Cor da borda */
+        margin-right: 5px;
+        /* Espaçamento entre os botões */
     }
 
     .pagination .page-item.active .page-link {
-        background-color: #3b5d50; /* Cor de fundo do botão ativo */
-        border-color: #3b5d50; /* Cor da borda do botão ativo */
+        background-color: #3b5d50;
+        /* Cor de fundo do botão ativo */
+        border-color: #3b5d50;
+        /* Cor da borda do botão ativo */
     }
 
     .pagination .page-link:hover {
-        color: #fff; /* Cor do texto ao passar o mouse */
-        background-color: #3b5d50; /* Cor de fundo ao passar o mouse */
-        border-color: #3b5d50; /* Cor da borda ao passar o mouse */
+        color: #fff;
+        /* Cor do texto ao passar o mouse */
+        background-color: #3b5d50;
+        /* Cor de fundo ao passar o mouse */
+        border-color: #3b5d50;
+        /* Cor da borda ao passar o mouse */
     }
 </style>
 <!-- Start Hero Section -->
@@ -48,7 +57,8 @@ function content_66789a486d4901_14109452 (Smarty_Internal_Template $_smarty_tpl)
             <div class="col-lg-5">
                 <div class="intro-excerpt">
                     <h1>Produtos</h1>
-                    <p class="mb-4">Aqui você irá encontrar tudo que busca para sua casa! <br> Móveis maravilhosos para aumentar a beleza, estilo e modernidade de sua casa.</p>
+                    <p class="mb-4">Aqui você irá encontrar tudo que busca para sua casa! <br> Móveis maravilhosos para
+                        aumentar a beleza, estilo e modernidade de sua casa.</p>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -62,20 +72,21 @@ function content_66789a486d4901_14109452 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 <!-- Fim da Seção Hero -->
 <!-- Shopping dos Sofás Início -->
- 
+
 <div class="container py-5">
     <h1 class="mb-4 text-center" style="height: -200px;">Shopping dos Sofás</h1>
-    
+
     <div class="row g-4">
         <div class="col-lg-3">
-            
+
             <div class="mb-3 text-center">
                 <h2>Categorias</h2>
             </div>
             <ul class="list-unstyled" style="padding-left: 0; margin-top: 30px;">
                 <li class="mb-3">
                     <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
-" class="btn btn-light d-flex justify-content-between align-items-center w-100">
+"
+                        class="btn btn-light d-flex justify-content-between align-items-center w-100">
                         <i class="fas fa-couch me-2"></i> Todos
                         <span class="badge bg-link rounded-pill">o</span>
                     </a>
@@ -88,7 +99,8 @@ $_smarty_tpl->tpl_vars['C']->do_else = false;
 ?>
                 <li class="mb-3">
                     <a href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
-" class="btn btn-light d-flex justify-content-between align-items-center w-100">
+"
+                        class="btn btn-light d-flex justify-content-between align-items-center w-100">
                         <i class="fas fa-couch me-2"></i> <?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
 
                         <span class="badge bg-link rounded-pill">o</span>
@@ -138,21 +150,30 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 </h5>
                             <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_desc'];?>
 </p>
-                            <p class="card-text"><small class="text-muted">R$ <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
+                            <p class="card-text" style="font-weight: bold;"><small class="text-muted">R$
+                                    <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
 </small></p>
-                            <button class="btn btn-primary adicionar-carrinho"
-                                data-product-id="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-primary btn-sm adicionar-carrinho" data-product-id="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
 "
-                                data-product-name="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+                                    data-product-name="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+" data-product-desc="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_desc'];?>
 "
-                                data-product-desc="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_desc'];?>
+                                    data-product-value="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
 "
-                                data-product-value="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
+                                    data-product-image="http://localhost/ecommerce/view/temas/images/thumb.php?src=<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
+&w=550&h=550&zc="
+                                    style="font-size: 10px;">
+                                    <i class="fa fa-shopping-bag me-2"></i> Adicionar ao carrinho
+                                </button>
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['PRO_INFO']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
+/<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_slug'];?>
 "
-                                data-product-image="http://localhost/ecommerce/view/temas/images/thumb.php?src=<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
-&w=550&h=550&zc=">
-                                <i class="fa fa-shopping-bag me-2"></i> Adicionar ao carrinho
-                            </button>
+                                    class="btn btn-outline-info btn-sm mais-informacoes" style="font-size: 10px;">
+                                    <i class="fa fa-info-circle me-1"></i> Mais informações
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -160,26 +181,20 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
-            <?php if ($_smarty_tpl->tpl_vars['PRO_TOTAL']->value < 1) {?>
-                <H4 class="alert alert-danger">NENHUM PRODUTO ENCONTRADO !</H4>
-            <?php }?>
         </div>
     </div>
-
-    <div class="col-12">
-        <nav aria-label="Paginação" class="d-flex justify-content-center mt-5">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-            </ul>
-        </nav>
-    </div>
+    <?php if ($_smarty_tpl->tpl_vars['PRO_TOTAL']->value < 1) {?> <H4 class="alert alert-danger">NENHUM PRODUTO ENCONTRADO !</H4>
+        <?php }?>
 </div>
-<!-- Fim do Shopping dos Sofás -->
+</div>
+
+<div class="col-12">
+    <nav aria-label="Paginação" class="d-flex justify-content-center mt-5">
+        <?php echo $_smarty_tpl->tpl_vars['PAGINAS']->value;?>
+
+    </nav>
+</div>
+
+</div>
 <?php }
 }

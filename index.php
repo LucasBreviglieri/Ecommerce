@@ -14,6 +14,7 @@ $smarty->assign('PAG_PRODUTOS', Rotas::pag_Produtos());
 $smarty->assign('PAG_LOGIN',    Rotas::pag_Login   ());
 $smarty->assign('PAG_CADASTRO', Rotas::pag_Cadastro());
 $smarty->assign('PAG_CONTATO',  Rotas::pag_contato ());
+$smarty->assign('DATA',         Sistema::dataAtual ());
 
 $smarty->display('index.tpl');
 

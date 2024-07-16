@@ -167,7 +167,7 @@
 
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <!-- END item -->
 
                         <div class="item">
@@ -190,7 +190,7 @@
 
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <!-- END item -->
 
                     </div>

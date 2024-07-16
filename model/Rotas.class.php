@@ -62,25 +62,28 @@ class Rotas {
         return $imagem;
     }
     
-
-
-
-
-static function get_Pagina() {
-    if (isset($_GET['pag'])) {
-        $pagina = $_GET['pag'];
-    } else {
-        $pagina = 'inicio'; 
+    static function get_Pasta_Controller(){
+        return self::$pasta_controller;
     }
 
-    self::$pag = explode('/', $pagina);
-    $pagina = 'controller/' . self::$pag[0] . '.php';
 
-    if (file_exists($pagina)) {
-        include $pagina;
-    } else {
-        include 'erro.php';
+
+    static function get_Pagina() {
+        if (isset($_GET['pag'])) {
+            $pagina = $_GET['pag'];
+        } else {
+            $pagina = 'inicio';
+        }
+    
+        self::$pag = explode('/', $pagina);
+        $pagina = 'controller/' . self::$pag[0] . '.php';
+    
+        if (file_exists($pagina)) {
+            include $pagina;
+        } else {
+            include 'erro.php';
+        }
     }
 }
-}
+
 ?>
